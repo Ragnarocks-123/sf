@@ -1,0 +1,81 @@
+---
+auths:
+  public_v1:
+    version: 1
+  secret_v3:
+    version: 3
+    community: public
+    security_level: authPriv
+    username: Snmp
+    password: ChangeMePriv123
+    auth_protocol: MD5
+    priv_protocol: DES
+    priv_password: ChangeMePriv123
+modules:
+  cisco_switch:
+    walk:
+      - CISCO-PROCESS-MIB::cpmCPUTotal1minRev
+      - CISCO-PROCESS-MIB::cpmCPUTotal5minRev
+      - CISCO-PROCESS-MIB::cpmCPUTotal1min
+      - CISCO-PROCESS-MIB::cpmCPUTotal5min
+      - CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolUsed
+      - CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolFree
+      - CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolType
+      - CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolName
+      - CISCO-ENVMON-MIB::ciscoEnvMonVoltageStatusTable
+      - CISCO-ENVMON-MIB::ciscoEnvMonFanStatusTable
+      - CISCO-ENVMON-MIB::ciscoEnvMonSupplyStatusTable
+      - CISCO-ENVMON-MIB::ciscoEnvMonMIBNotificationEnables
+      - CISCO-ENVMON-MIB::ciscoEnvMonTemperatureStatusTable
+      - CISCO-C2900-MIB::c2900PortTable
+      - CISCO-C2900-MIB::c2900PortStatsEntry
+      - CISCO-C2900-MIB::c2900BandwidthUsage
+      - CISCO-FLASH-MIB::ciscoFlashPartitionSize
+      - CISCO-FLASH-MIB::ciscoFlashPartitionFreeSpace
+      - POWER-ETHERNET-MIB::pethPsePortTable
+      - CISCO-VTP-MIB::vtpVlanEntry
+      - CISCO-VTP-MIB::vtpInternalVlanTable
+      - CISCO-VTP-MIB::vtpStatsEntry
+      - CISCO-VTP-MIB::vlanTrunkPortEntry
+      - CISCO-VTP-MIB::vtpDiscoverResultTable
+  cisco_main_switch:
+    walk:
+      - CISCO-PROCESS-MIB::cpmCPUTotal1minRev
+      - CISCO-PROCESS-MIB::cpmCPUTotal5minRev
+      - CISCO-PROCESS-MIB::cpmCPUTotal1min
+      - CISCO-PROCESS-MIB::cpmCPUTotal5min
+      - CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolUsed
+      - CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolFree
+      - CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolType
+      - CISCO-MEMORY-POOL-MIB::ciscoMemoryPoolName
+      - CISCO-ENVMON-MIB::ciscoEnvMonVoltageStatusTable
+      - CISCO-ENVMON-MIB::ciscoEnvMonFanStatusTable
+      - CISCO-ENVMON-MIB::ciscoEnvMonSupplyStatusTable
+      - CISCO-ENVMON-MIB::ciscoEnvMonMIBNotificationEnables
+      - CISCO-ENVMON-MIB::ciscoEnvMonTemperatureStatusTable
+      - CISCO-C2900-MIB::c2900PortTable
+      - CISCO-C2900-MIB::c2900PortStatsEntry
+      - CISCO-C2900-MIB::c2900BandwidthUsage
+      - CISCO-FLASH-MIB::ciscoFlashPartitionSize
+      - CISCO-FLASH-MIB::ciscoFlashPartitionFreeSpace
+      - POWER-ETHERNET-MIB::pethPsePortTable
+      - CISCO-VTP-MIB::vtpVlanEntry
+      - CISCO-VTP-MIB::vtpInternalVlanTable
+      - CISCO-VTP-MIB::vtpStatsEntry
+      - CISCO-VTP-MIB::vlanTrunkPortEntry
+      - CISCO-VTP-MIB::vtpDiscoverResultTable
+      - CISCO-STACKWISE-MIB::cswSwitchRole
+      - CISCO-ENVMON-MIB::ciscoEnvMonSupplyState
+      - CISCO-STACKWISE-MIB::cswStackPortOperStatus
+      - POWER-ETHERNET-MIB::pethMainPseOperStatus
+      - CISCO-ENVMON-MIB::ciscoEnvMonFanState
+      - CISCO-RF-MIB::cRFStatusUnitState
+      - CISCO-ENTITY-VENDORTYPE-OID-MIB::cevPortBaseTEther
+      - CISCO-ENTITY-VENDORTYPE-OID-MIB::cevContainerC3KPowerSupply
+      - CISCO-ENTITY-VENDORTYPE-OID-MIB::cevContainerC3KRemotePowerSupply
+      - CISCO-ENTITY-VENDORTYPE-OID-MIB::cevPowerSupplyPwrXPS2200
+      - CISCO-ENTITY-VENDORTYPE-OID-MIB::cevContainerFanTraySlot
+      - CISCO-ENTITY-VENDORTYPE-OID-MIB::cevSensorModuleInletTemp
+      - CISCO-ENTITY-VENDORTYPE-OID-MIB::cevSensorModuleOutletTemp
+      - CISCO-ENTITY-VENDORTYPE-OID-MIB::cevSensorModuleHotSpotTemp
+      - CISCO-ENTITY-VENDORTYPE-OID-MIB::cevContainerFixedLinkModuleSlot
